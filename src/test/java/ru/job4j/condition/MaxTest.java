@@ -42,11 +42,12 @@ public class MaxTest {
     }
 
     @Test
-    public void whenMax5To3To1Then5() {
+    public void whenMax5To3To1To4Then5() {
         int left = 5;
         int right = 3;
         int third = 1;
-        int result = Max.max(left, right, third);
+        int forth = 4;
+        int result = Max.max(left, right, third, forth);
         int expected = 5;
         assertThat(result).isEqualTo(expected);
     }
