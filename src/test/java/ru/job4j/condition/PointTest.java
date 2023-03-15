@@ -14,7 +14,7 @@ public class PointTest {
     }
 
     @Test
-    public void when10to20then2() {
+    public void when10to20then1() {
         Point a = new Point(1, 0);
         Point b = new Point(2, 0);
         double out = a.distance(b);
@@ -37,6 +37,26 @@ public class PointTest {
         Point b = new Point(2, 2);
         double out = a.distance(b);
         double expected = 2;
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when24to22to10then2() {
+        Point a = new Point(2, 4);
+        Point b = new Point(2, 2);
+        Point c = new Point(1, 0);
+        double out = a.distance(b);
+        double expected = 2;
+        Assert.assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    public void when10to20to33then1() {
+        Point a = new Point(1, 0);
+        Point b = new Point(2, 0);
+        Point c = new Point(3, 3);
+        double out = a.distance(b);
+        double expected = 1;
         Assert.assertEquals(expected, out, 0.01);
     }
 }
